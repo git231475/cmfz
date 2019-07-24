@@ -27,6 +27,7 @@ public class TestUserPOI {
         List<User> users = userDao.selectAllUser();
         System.out.println("================");
         System.out.println("****************");
+        System.out.println("-----------------");
         Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams("所有用户", "用户表"),User.class,users);
         workbook.write(new FileOutputStream("f:/testPOI/第一个EasyPOIExcel文档.xls"));
     }
